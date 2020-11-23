@@ -1,0 +1,44 @@
+mutation editJob(
+  $nomina: String!
+  $salary: Float!
+  $buildingId: String!
+  $job: String!
+  $jobId: String!
+  $employeeId: String!
+  $name: String!
+  $phone: String!
+  $address: String!
+  $heal_plan: String!
+  $INE: String!
+  $isActive: Boolean!
+  $observations: String
+) {
+  editJob(
+    job: {
+      id: $jobId
+      nomina: $nomina
+      salary: $salary
+      building: $buildingId
+      job: $job
+      observations: $observations
+      isActive: $isActive
+    }
+    employee: {
+      id: $employeeId
+      name: $name
+      address: $address
+      heal_plan: $heal_plan
+      INE: $INE
+      phone: $phone
+    }
+  ) {
+    job {
+      ...JobSnippet
+    }
+
+    errors {
+      field
+      error
+    }
+  }
+}

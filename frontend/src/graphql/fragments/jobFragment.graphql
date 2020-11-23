@@ -1,0 +1,21 @@
+fragment JobSnippet on Job {
+  id
+  salary
+  job
+  nomina
+  cratedAt
+  observations
+  isActive
+  employee {
+    id
+    name
+    heal_plan
+    phone
+    INE
+    address
+  }
+  building {
+    id
+    name
+  }
+}

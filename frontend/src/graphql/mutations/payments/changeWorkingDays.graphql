@@ -1,0 +1,6 @@
+mutation changeWorkingDays($working_days: Int!, $paymentId: String!) {
+  changeWorkingDays(working_days: $working_days, paymentId: $paymentId) {
+    id
+    working_days
+  }
+}

@@ -1,0 +1,19 @@
+query payments($buildingId: String!, $endDate: String!, $initialDate: String!) {
+  getEmployeePayments(
+    buildingId: $buildingId
+    endDate: $endDate
+    initialDate: $initialDate
+  ) {
+    id
+    working_days
+    startWeekDate {
+      date
+    }
+    job {
+      employee {
+        name
+      }
+      salary
+    }
+  }
+}

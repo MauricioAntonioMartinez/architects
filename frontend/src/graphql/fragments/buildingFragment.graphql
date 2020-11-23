@@ -1,0 +1,9 @@
+fragment BuildingSnippet on Building {
+  id
+  name
+  date
+  status {
+    id
+    status
+  }
+}

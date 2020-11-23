@@ -1,0 +1,18 @@
+mutation UpdateBuilding(
+  $id: String!
+  $name: String!
+  $date: String!
+  $status: String!
+) {
+  updateBuilding(
+    building: { id: $id, name: $name, date: $date, status: $status }
+  ) {
+    building {
+      ...BuildingSnippet
+    }
+    errors {
+      field
+      error
+    }
+  }
+}

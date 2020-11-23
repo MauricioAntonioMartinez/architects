@@ -1,0 +1,29 @@
+# mutation AddEmployee(
+#   $name: String!
+#   $phone: String!
+#   $address: String!
+#   $heal_plan: String!
+#   $INE: String!
+
+# ) {
+#   addEmployee(
+#     fields: {
+#       name: $name
+#       phone: $phone
+#       heal_plan: $heal_plan
+#       address: $address
+#       INE: $INE
+#     }
+#   ) {
+#     employee {
+#       id
+#       INE
+#       heal_plan
+#       address
+#     }
+#     errors {
+#       field
+#       error
+#     }
+#   }
+# }

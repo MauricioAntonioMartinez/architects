@@ -1,0 +1,11 @@
+{
+  "type": "postgres",
+  "host": "solar-panel.cj5z9sp8a9ui.us-east-2.rds.amazonaws.com",
+  "port": 5432,
+  "user":"wabi_solutions",
+  "username": "wabi_solutions",
+  "password": "g}$Nt$&}We8X={Te",
+  "database": "architects",
+  "entities": ["dist/entities/**/*.js"],
+  "migrations": ["dist/migrations/*.js"]
+}

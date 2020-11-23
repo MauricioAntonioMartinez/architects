@@ -1,0 +1,35 @@
+fragment PurchaseSnippet on Purchase {
+  id
+  note_number
+  cost
+  purchase_date
+  # observations
+  building {
+    id
+    name
+  }
+  material {
+    id
+    description
+    provider {
+      id
+      name
+    }
+  }
+  # status_purchase {
+  #   id
+  #   status
+  # }
+  # purchase_kind {
+  #   id
+  #   kind
+  # }
+  # payment_mode {
+  #   id
+  #   payment
+  # }
+  building_status {
+    id
+    status
+  }
+}

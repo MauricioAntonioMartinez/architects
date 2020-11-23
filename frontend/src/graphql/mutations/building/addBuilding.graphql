@@ -1,0 +1,11 @@
+mutation AddBuilding($name: String!, $date: String!, $status: String!) {
+  addBuilding(fields: { name: $name, date: $date, status: $status }) {
+    building {
+      ...BuildingSnippet
+    }
+    errors {
+      field
+      error
+    }
+  }
+}

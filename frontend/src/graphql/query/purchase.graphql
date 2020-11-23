@@ -1,0 +1,32 @@
+query purchase($purchaseId: String!) {
+  purchase(purchase_id: $purchaseId) {
+    id
+    note_number
+    cost
+    purchase_date
+    observations
+    building {
+      id
+    }
+    material {
+      id
+      description
+      provider {
+        id
+        name
+      }
+    }
+    status_purchase {
+      id
+    }
+    purchase_kind {
+      id
+    }
+    payment_mode {
+      id
+    }
+    building_status {
+      id
+    }
+  }
+}

@@ -1,0 +1,11 @@
+query report($buildingId: String!, $initialDate: String!, $endDate: String!) {
+  generateReport(
+    buildingId: $buildingId
+    initialDate: $initialDate
+    endDate: $endDate
+  ) {
+    work_force_total
+    material_total
+    building_total
+  }
+}

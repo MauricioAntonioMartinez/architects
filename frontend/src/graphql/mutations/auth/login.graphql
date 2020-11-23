@@ -1,0 +1,15 @@
+mutation LoginUser($email: String!, $password: String!) {
+  loginUser(fields: { email: $email, password: $password }) {
+    credentials {
+      token
+      expiresIn
+      role {
+        role
+      }
+    }
+    errors {
+      field
+      error
+    }
+  }
+}

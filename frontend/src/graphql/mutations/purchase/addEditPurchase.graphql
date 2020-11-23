@@ -1,0 +1,54 @@
+mutation AddEditPurchase(
+  $id: String
+  $note_number: String!
+  $purchaseKindId: Int!
+  $material: String!
+  $provider: String!
+  $cost: Float!
+  $purchase_date: String!
+  $statusPurchaseId: Int!
+  $paymentModeId: Int!
+  $buildingId: String!
+  $buildingStatusId: Int!
+  $observations: String
+  $isEditMode: Boolean
+) {
+  addEditPurchase(
+    fields: {
+      id: $id
+      note_number: $note_number
+      purchaseKindId: $purchaseKindId
+      material: $material
+      provider: $provider
+      cost: $cost
+      purchase_date: $purchase_date
+      statusPurchaseId: $statusPurchaseId
+      paymentModeId: $paymentModeId
+      buildingId: $buildingId
+      buildingStatusId: $buildingStatusId
+      observations: $observations
+    }
+    isEditMode: $isEditMode
+  ) {
+    purchase {
+      ...PurchaseSnippet
+      observations
+      status_purchase {
+        id
+        status
+      }
+      purchase_kind {
+        id
+        kind
+      }
+      payment_mode {
+        id
+        payment
+      }
+    }
+    errors {
+      field
+      error
+    }
+  }
+}

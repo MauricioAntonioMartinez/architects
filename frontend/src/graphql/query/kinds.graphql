@@ -1,0 +1,24 @@
+query kinds {
+  kinds {
+    payment_mode {
+      id
+      payment
+    }
+    purchase_kind {
+      id
+      kind
+    }
+    status_payment {
+      id
+      status
+    }
+    building_status {
+      id
+      status
+    }
+    status_purchase {
+      id
+      status
+    }
+  }
+}

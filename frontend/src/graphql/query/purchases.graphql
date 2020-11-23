@@ -1,0 +1,8 @@
+query purchases($limit: Int!, $cursor: String!) {
+  purchases(limit: $limit, cursor: $cursor) {
+    purchases {
+      ...PurchaseSnippet
+    }
+    hasMore
+  }
+}
