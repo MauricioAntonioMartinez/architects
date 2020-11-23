@@ -8,6 +8,9 @@ node_modules
 node_modules/
 dist/
 
+.env.production
+
+
 # Compiled Java class files
 *.class
 
